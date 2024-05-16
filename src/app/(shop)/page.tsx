@@ -1,11 +1,14 @@
-import { titleFont } from "@/config/fonts";
-import Image from "next/image";
+import { Title } from "@/components";
+
 
 export default function Home() {
   return (
-    <div className="">
-      <h1>Hola a todos</h1>
-      <h2 className={titleFont.className}>Hola a todos 2</h2>
-    </div>
+    <>
+      <Title
+      title='Tienda'
+      subtitle="Todos los productos"
+      className="mb-2"
+      />
+    </>
   );
 }
