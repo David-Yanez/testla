@@ -1,3 +1,4 @@
+import { SizeSelector } from "@/components"
 import { titleFont } from "@/config/fonts"
 import { initialData } from "@/seed/seed"
 import { notFound } from "next/navigation"
@@ -29,7 +30,14 @@ export default function ProductSlug({params}: Props) {
                 <h1 className={`${titleFont.className} antialiased font-bold text-xl`}>{product.title}</h1>
                 <p className="text-lg mb-5">{product.price}</p>
                 {/**Selector de tallas */}
+                <SizeSelector 
+                  selectedSize={product.sizes[1]}
+                  availableSizes={product.sizes}
+                  />
                 {/**Selector de CAntidad  */}
+
+
+                {/**Button */}
                 <button className="btn-primary my-5">
                     Agregar al carrito
                 </button>
